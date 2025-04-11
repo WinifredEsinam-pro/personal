@@ -106,7 +106,7 @@ margin-left: -40px;
         padding-top: 17px;
       border-radius: 50%;;
       object-fit: cover;
-      animation: scaleUp 4s ease forwards;
+      animation: scaleUp 2s ease forwards;
       } 
         #projects > h1{
           font-family: "Roboto", sans-serif;
@@ -393,108 +393,371 @@ font-variation-settings:
      #arrow i {
         font-size: 24px;
      }
-     @media (max-width: 1200px) {
+    @media (max-width: 1200px) {
       .navcontainer {
-        width: 100%;
+        flex-direction: row;
       }
+    
       #home > .myimage {
         width: 300px;
         height: 300px;
       }
     }
     
-    /* For screens smaller than 992px */
     @media (max-width: 992px) {
-      .navcontainer > nav > ul {
+      /* .navcontainer > nav > ul {
         margin-right: 50px;
-      }
+      } */
+    
       #projects > .images {
         flex-direction: column;
         align-items: center;
       }
+    
       #projects > .images > img {
         margin-bottom: 20px;
       }
     }
-/* For screens smaller than 768px */
-@media (max-width: 768px) {
-  .navcontainer {
-    flex-direction: column;
-    align-items: center;
+    
+    @media (max-width: 768px) {
+      /* .navcontainer {
+        flex-direction: column;
+        align-items: center;
+      } */
+    
+      .navcontainer > nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 0%;
+        padding-top: 0%;
+      }
+    
+      /* .navcontainer > nav > ul {
+        flex-direction: column;
+        margin-right: 0;
+      } */
+    
+      .navcontainer > nav > ul > li {
+        margin-bottom: 6px;
+        font-size: 8px;
+      }
+    
+      #home > .myimage {
+        width: 250px;
+        height: 250px;
+      }
+    
+      .navcontainer > .logoimage {
+        width: 80px;
+        height: 50px;
+        margin-top: 6px;
+     margin-left: -25px;
+        background-color: red;
+        /* padding-top: -10px; */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .navcontainer {
+        /* flex-direction: column;  */
+        align-items: center;
+      }
+    
+      .navcontainer > nav {
+        width: 100%;
+        text-align: center;
+      }
+    
+      .navcontainer > nav > ul {
+        font-size: 12px;
+        margin-right: 0;
+      } 
+      #home > .myimage {
+        width: 200px;
+        height: 200px;
+      }
+    
+      #projects > h1,
+      #about > h1,
+      #contact > h1 {
+        font-size: 24px;
+      }
+    }
+      @media (max-width: 480px) {
+        .navcontainer > .logoimage {
+          width: 80px; /* Logo takes up more space on small screens */
+          height: 40px;
+          margin-top: 7px;
+          margin-left: 0;
+          /* margin-bottom: -20px; */
+        }
+        #home > #myname .myname{
+          font-size: 24px;
+    }
+    
+    /* For Small Mobile Screens */
+    @media (max-width: 320px) {
+      .navcontainer > .logoimage {
+        width: 90px; /* Slightly larger for very small screens */
+        height: 30px;
+        margin-left: 0;
+        margin-bottom: 0px;
+      }
+    
+      #home > .myimage {
+        width: 180px;
+        height: 180px;
+      }
+    
+      .navcontainer > nav > ul {
+        /* flex-direction: column; */
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+    /* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  #about > .div1 {
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
   }
-  .navcontainer > nav {
-    width: 100%;
-    text-align: center;
+
+  #about > .div1 > #div3 {
+    max-width: 400px;
   }
-  .navcontainer > nav > ul {
-    flex-direction: column;
-    margin-right: 0;
-  }
-  .navcontainer > nav > ul > li {
-    margin-bottom: 10px;
-  }
-  #home > .myimage {
-    width: 250px;
-    height: 250px;
+
+  #about > .div1 > #div4 > p {
+    font-size: 16px;
+    max-width: 400px;
   }
 }
-/* For screens smaller than 480px */
-@media (max-width: 480px) {
-  .navcontainer {
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  #about > .div1 {
     flex-direction: column;
     align-items: center;
+    gap: 20px; /* Decrease gap between the sections */
   }
-  .navcontainer > nav {
-    width: 100%;
-    text-align: center;
+
+  #about > h1 {
+    font-size: 36px;
+    margin-top: 20px;
   }
-  .navcontainer > nav > ul {
-    flex-direction: column;
-    margin-right: 0;
+
+  #about > h4 {
+    font-size: 24px;
   }
-  .navcontainer > nav > ul > li {
-    margin-bottom: 10px;
+
+  #about > .div1 > #div3 {
+    font-size: 16px;
+    max-width: 90%;
   }
-  #home > .myimage {
-    width: 200px;
-    height: 200px;
+
+  #about > .div1 > #div4 > p {
+    font-size: 16px;
+    max-width: 90%;
   }
-  #projects > h1 {
-    font-size: 30px;
-  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
   #about > h1 {
     font-size: 30px;
   }
-  #contact > h1 {
-    font-size: 30px;
+
+  #about > .div1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about > .div1 > #div3 {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  #about > .div1 > #div4 > p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  #about > h4 {
+    font-size: 22px;
   }
 }
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  #about > h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  #about > h4 {
+    font-size: 17px;
+  }
+
+  #about > .div1 > #div3 {
+    font-size: 14px;
+    max-width: 100%;
+  }
+   #about > .div1 > #div3 >ul {
+          list-style-type: none;
+     display: block;
+     align-items: left;
+        }
+  #about > .div1 > #div4 > p {
+    font-size: 14px;
+    max-width: 100%;
+    text-align: justify;
+  }
+}
+@media (max-width: 1200px) {
+  .contactsection {
+    padding: 15px;
+    max-width: 500px; /* Slightly smaller max width on medium screens */
+  }
+
+  #contact > h1 {
+    font-size: 35px; /* Slightly smaller font size */
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  input, select, textarea {
+    font-size: 16px; /* Make inputs a bit smaller on larger screens */
+  }
+
+  button {
+    font-size: 16px; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 992px) {
+  .contactsection {
+    padding: 15px;
+    max-width: 450px; /* Further reduce max width for tablet screens */
+  }
+
+  #contact > h1 {
+    font-size: 30px; /* Adjust font size for smaller devices */
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
-  .navcontainer > .logoimage {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    margin-bottom: -30px;
-    margin-left: -20px;
+  .contactsection {
+    padding: 10px;
+    max-width: 400px; /* Reduce max width on smaller devices */
+  }
+
+  #contact > h1 {
+    font-size: 28px; /* Adjust font size for smaller devices */
+  }
+
+  input, select, textarea {
+    font-size: 14px;
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px; /* Reduce padding for buttons */
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .contactsection {
+    padding: 10px;
+    max-width: 90%; /* Ensure full width usage on very small screens */
+/*     background-color: red; */
+  }
+
+  #contact > h1 {
+    font-size: 24px; /* Even smaller font size on very small devices */
+  }
+
+  input, select, textarea {
+    font-size: 12px;
+    padding: 6px; /* Adjust padding for very small screens */
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px; /* Smaller button padding */
   }
 }
 @media (max-width: 480px) {
-  .navcontainer > .logoimage {
-    width: 80px;
-    height: 80px;
-    margin-top: 5px;
-    margin-bottom: 12px;
-    margin-left: -5px;
+  footer{
+    text-align: center;
+    align-items: center;
   }
-}
-@media (min-width: 1200px) {
-  .navcontainer > .logoimage {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-    margin-bottom: -40px;
-    margin-left: -30px;
-  }
+  .lightbox {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 60%;
+          background-color: rgba(0, 0, 0, 0.8);
+          display: none;
+        }
+        
+        .lightbox-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          text-align: center;
+        }
+        
+        .lightbox-image {
+          width: 100%;
+          height: 500px;
+          object-fit: contain;
+          border-radius: 10px;
+        }
+
+        .lightbox-caption {
+          margin-top: 10px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        
+        .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 30px;
+          font-weight: bold;
+          cursor: pointer;
+          background-color: red;
+          border-radius: 5px;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+        
 }
 
 
